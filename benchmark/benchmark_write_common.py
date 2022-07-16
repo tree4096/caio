@@ -4,7 +4,7 @@ import time
 import typing
 from tempfile import NamedTemporaryFile
 
-from caio.asyncio_base import AsyncioContextBase
+from caiofix.asyncio_base import AsyncioContextBase
 
 
 data = os.urandom(1024)
