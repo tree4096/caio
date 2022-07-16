@@ -5,7 +5,7 @@ from importlib.machinery import SourceFileLoader
 from setuptools import Extension, setup
 
 
-module_name = "caiofix"
+module_name = "caio"
 module = SourceFileLoader(
     "version", os.path.join(module_name, "version.py"),
 ).load_module()

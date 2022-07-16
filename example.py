@@ -1,5 +1,5 @@
 import asyncio
-from caiofix import AsyncioContext
+from caio import AsyncioContext
 
 
 loop = asyncio.get_event_loop()
