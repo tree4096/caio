@@ -3,7 +3,7 @@ import os
 import time
 from functools import lru_cache
 
-from caiofix.asyncio_base import AsyncioContextBase
+from caio.asyncio_base import AsyncioContextBase
 
 
 chunk_size = 16 * 1024  # 1024

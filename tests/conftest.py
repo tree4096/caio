@@ -1,6 +1,6 @@
 import pytest
 
-from caiofix import variants, variants_asyncio
+from caio import variants, variants_asyncio
 
 
 @pytest.fixture(params=variants)
