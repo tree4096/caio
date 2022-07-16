@@ -3,17 +3,17 @@ import platform
 import sys
 from subprocess import check_output
 
-import caio
+import caiofix
 import pytest
 
 
-@pytest.fixture(params=caio.variants)
+@pytest.fixture(params=caiofix.variants)
 def implementation(request):
-    if request.param is caio.linux_aio:
+    if request.param is caiofix.linux_aio:
         return "linux"
-    if request.param is caio.thread_aio:
+    if request.param is caiofix.thread_aio:
         return "thread"
-    if request.param is caio.python_aio:
+    if request.param is caiofix.python_aio:
         return "python"
 
     raise RuntimeError("Unknown variant %r" % (request.param,))
@@ -35,7 +35,7 @@ def test_env_selector(implementation):
 
 @pytest.fixture()
 def implementation_file(implementation):
-    path = os.path.dirname(caio.__file__)
+    path = os.path.dirname(caiofix.__file__)
     fname = os.path.join(path, "default_implementation")
 
     try:
